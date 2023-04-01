@@ -1,42 +1,77 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+/Code_Running_Platform/dist
+/Code_Running_Platform/tmp
+/Code_Running_Platform/out-tsc
+/Code_Running_Platform/bazel-out
+
+/api/dist
+/api/tmp
+/api/out-tsc
+/api/bazel-out
 
 # Node
-/node_modules
-npm-debug.log
-yarn-error.log
+/Code_Running_Platform/node_modules
+/Code_Running_Platform/npm-debug.log
+/Code_Running_Platform/yarn-error.log
+
+/api/node_modules
+/api/npm-debug.log
+/api/yarn-error.log
 
 # IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+/Code_Running_Platform/.idea/
+/Code_Running_Platform/.project
+/Code_Running_Platform/.classpath
+/Code_Running_Platform/.c9/
+/Code_Running_Platform/*.launch
+/Code_Running_Platform/.settings/
+/Code_Running_Platform/*.sublime-workspace
+
+/api/.idea/
+/api/.project
+/api/.classpath
+/api/.c9/
+/api/*.launch
+/api/.settings/
+/api/*.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+/Code_Running_Platform/.vscode/*
+/Code_Running_Platform/!.vscode/settings.json
+/Code_Running_Platform/!.vscode/tasks.json
+/Code_Running_Platform/!.vscode/launch.json
+/Code_Running_Platform/!.vscode/extensions.json
+/Code_Running_Platform/.history/*
+
+/api/.vscode/*
+/api/!.vscode/settings.json
+/api/!.vscode/tasks.json
+/api/!.vscode/launch.json
+/api/!.vscode/extensions.json
+/api/.history/*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+/Code_Running_Platform/.angular/cache
+/Code_Running_Platform/.sass-cache/
+/Code_Running_Platform/connect.lock
+/Code_Running_Platform/coverage
+/Code_Running_Platform/libpeerconnection.log
+/Code_Running_Platform/testem.log
+/Code_Running_Platform/typings
+
+/api/.angular/cache
+/api/.sass-cache/
+/api/connect.lock
+/api/coverage
+/api/libpeerconnection.log
+/api/testem.log
+/api/typings
 
 # System files
-.DS_Store
-Thumbs.db
+/Code_Running_Platform/.DS_Store
+/Code_Running_Platform/Thumbs.db
+
+/api/.DS_Store
+/api/Thumbs.db
