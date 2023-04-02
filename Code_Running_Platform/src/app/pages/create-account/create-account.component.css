@@ -49,3 +49,8 @@ mat-form-field{
     background-color: #30bd5a;
     color: white;
 }
+´
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: #30bd5a;
+    color: white;
+}

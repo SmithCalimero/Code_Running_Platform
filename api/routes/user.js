@@ -10,9 +10,10 @@ const {v4:uuidv4} = require('uuid');
 router.get('/', (req,resp)=>{
     resp.end("user route");
 });
+
 router.post('/', (req,resp)=>{
     let userObj = req.body; //this has the email and password fields
-    userObj.password = CryptoJS.encrypt(userObj.password, 'naovejasomeucodigo').toString();
+    userObj.password = CryptoJS.AES.encrypt(userObj.password, 'naovejasomeucodigo').toString();
     userObj['userid'] = uuidv4(); //this will generate a random string
     let newUser = new userModel(userObj);
     newUser.save().then((doc)=>{

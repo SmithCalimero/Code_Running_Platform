@@ -2,4 +2,12 @@
     <div class="branding">
         Code Running Platform
     </div>
+    <div class="profile-container" *ngIf="userService.user != undefined">
+        <button mat-icon-button [matMenuTriggerFor]="menu"> <!-- binded to menu -->
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button (click)="logout()" mat-menu-item>Logout</button>
+          </mat-menu>
+    </div>
 </div>

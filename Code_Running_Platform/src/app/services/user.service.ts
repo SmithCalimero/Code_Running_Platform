@@ -12,7 +12,7 @@ export class UserService {
 
   public createAccount(userObj:any){
     return new Promise((resolve, reject) => {
-      this.http.post('http://localhost:300/users', userObj).subscribe(
+      this.http.post('http://localhost:3000/users', userObj).subscribe(
         (res)=>{
           resolve(res);
         },
@@ -25,7 +25,7 @@ export class UserService {
 
   public login(userObj:any){
     return new Promise((resolve, reject) => {
-      this.http.post('http://localhost:300/login', userObj).subscribe(
+      this.http.post('http://localhost:3000/users/login', userObj).subscribe(
         (res)=>{
           resolve(res);
         },
