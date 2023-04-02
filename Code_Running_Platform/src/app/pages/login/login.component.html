@@ -23,7 +23,7 @@
 
       <!-- {{loginForm.value | json}} -->
       <div class="buttons-container">
-          <button [disabled]="loginForm.invalid" class="login-button" mat-raised-button> Login </button>
+          <button (click)="login()" [disabled]="loginForm.invalid" class="login-button" mat-raised-button> Login </button>
           <p>OR</p>
           <button mat-button routerLink="/create-account">Create account</button>
       </div>

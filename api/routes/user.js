@@ -35,7 +35,7 @@ router.post('/login',(req,res)=>{ // localhost:3000/users/login
                 res.json({error : false, response: userDoc}); //if everything goes alright
             }
             else{
-                res.json({error : true, message: 'Incorrect login data'}); //if the password is incorrect
+                res.json({error : true, message: 'Incorrect password'}); //if the password is incorrect
             }
         }
     }).catch();
