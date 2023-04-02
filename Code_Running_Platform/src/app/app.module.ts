@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { MatMenuModule } from '@angular/material/menu'; 
 import { MatIconModule } from '@angular/material/icon';
+import { CodingComponent } from './pages/coding/coding.component';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     TopbarComponent,
     LoginComponent,
     CreateAccountComponent,
-    HomeComponent
+    HomeComponent,
+    CodingComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     HttpClientModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MonacoEditorModule.forRoot(),
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

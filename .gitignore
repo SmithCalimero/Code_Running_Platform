@@ -69,6 +69,8 @@
 /api/testem.log
 /api/typings
 
+/api/.env
+
 # System files
 /Code_Running_Platform/.DS_Store
 /Code_Running_Platform/Thumbs.db

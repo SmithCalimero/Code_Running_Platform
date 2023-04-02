@@ -1,8 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const axios = require('axios').default;; 
 
 const userRoute = require('./routes/user');
+const fiddleRoute = require('./routes/fiddle');
 
 const app = express();
 
@@ -14,8 +17,20 @@ app.get('/', (req,res)=>{
 });
 
 app.use('/users', userRoute);
+app.use('/fiddles', fiddleRoute);
 
-mongoose.connect('mongodb+srv://usercrp:tGzpTL2DK5rz6gaX@coderpex.0fyvvut.mongodb.net/crp?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+app.post('/execute', (req, res)=>{
+    let reqObj = req.body;
+    reqObj['clientId'] = process.env.JDOODLE_CLIENT_ID;
+    reqObj['clientSecret'] = process.env.JDOODLE_CLIENT_SECRET;
+    axios.post('https://api.jdoodle.com/v1/execute', reqObj).then((resp)=>{
+        res.json({error:false, response: resp});
+    }).catch((err)=>{
+        console.log(err);
+    });
+});
+
+mongoose.connect(process.env.MONGODB_LINK, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log('connected to db');
     })
