@@ -13,7 +13,7 @@ export class HomeComponent {
   constructor(public fiddleService:FiddleService, public userService:UserService, private router:Router) { }
 
   create(){
-    this.fiddleService.newFiddle().then((res:any)=> => {
+    this.fiddleService.newFiddle().then((res:any)=> {
       console.log(res);
     }).catch((err)=>{
       console.log(err);
