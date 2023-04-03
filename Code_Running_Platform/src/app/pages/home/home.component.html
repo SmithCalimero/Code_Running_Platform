@@ -2,15 +2,14 @@
     <div class="content-wrapper">
     	<button (click)="create()" mat-raised-button class="new-button" >New Fiddle</button>
 		
-        <div class="fiddle-card">
+        <div class="fiddle-card" *ngFor="let fiddle of fiddles">
             <div class="title">
-                Fiddle Name
+                {{fiddle.name}}
             </div>
             <div class="actions">
-                <button mat-icon-button> <mat-icon>edit</mat-icon> </button>
-                <button mat-icon-button> <mat-icon>delete</mat-icon> </button>
+                <button [routerLink]="['/coding', fiddle.fiddleid]" mat-icon-button> <mat-icon>edit</mat-icon> </button>
+                <button (click)="delete(fiddle.fiddleid)" mat-icon-button> <mat-icon>delete</mat-icon> </button>
             </div>
         </div>
-        
     </div>
 </div>

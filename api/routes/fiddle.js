@@ -43,7 +43,7 @@ router.put('/',(req,res)=>{
 });
 
 //fiddles/:fiddleid       - DELETE
-router.get('/:fiddleid',(req,res)=>{
+router.delete('/:fiddleid',(req,res)=>{
     fiddleModel.deleteOne({fiddleid: req.params.fiddleid}).then((_)=>{
         res.json({error:false});
     }).catch((err)=>{
